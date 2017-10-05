@@ -18,7 +18,7 @@
 <!-- Head[End] -->
 
 <!-- Main[Start] -->
-<form method="post" action="insert.php">
+<form method="POST" action="insert.php" enctype="multipart/form-data">
   <div class="jumbotron">
    <fieldset>
     <legend>ユーザー登録</legend>
@@ -35,8 +35,9 @@
               <option value="using">0:使用中</option>
               <option value="not_using">1:使用しなくなった</option>
           </select><br>
-<!--          <label>管理：<input type="text" name="kanri_flg"></label><br>-->
-<!--          <label>life：<input type="text" name="life_flg"></label><br>-->
+          <label for = "upfile">顔写真：</label><br>
+          <input type="hidden" name = "max_file_size" value="1000000" />
+          <input id = "upfile" type="file" name="upfile" size="40" />
      <input type="submit" value="送信">
     </fieldset>
   </div>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2017 年 10 月 05 日 09:58
+-- Generation Time: 2017 年 10 月 05 日 14:36
 -- サーバのバージョン： 5.6.21
 -- PHP Version: 5.6.3
 
@@ -32,19 +32,23 @@ CREATE TABLE IF NOT EXISTS `gs_user_table` (
   `lid` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `lpw` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `kanri_flg` int(1) NOT NULL,
-  `life_flg` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `life_flg` int(1) NOT NULL,
+  `photo` blob
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- テーブルのデータのダンプ `gs_user_table`
 --
 
-INSERT INTO `gs_user_table` (`id`, `name`, `lid`, `lpw`, `kanri_flg`, `life_flg`) VALUES
-(1, 'しまざき', '0000', '0000', 1, 1),
-(5, 'たけだ', '2222', '2222', 1, 1),
-(6, 'やまだ', '2222', '2222', 0, 0),
-(8, 'しまざき', '0000', '0000', 0, 0),
-(11, '八代', '1234', '1234', 1, 0);
+INSERT INTO `gs_user_table` (`id`, `name`, `lid`, `lpw`, `kanri_flg`, `life_flg`, `photo`) VALUES
+(1, 'しまざき', '0000', '0000', 1, 1, ''),
+(5, 'たけだ', '2222', '2222', 1, 1, ''),
+(6, 'やまだ', '2222', '2222', 0, 0, ''),
+(8, 'しまざき', '0000', '0000', 0, 0, ''),
+(11, '八代', '1234', '1234', 1, 0, ''),
+(13, 'しまざき', '7777', '7777', 1, 0, ''),
+(14, 'しまざき', '0000', '0000', 1, 1, NULL),
+(15, 'たけだ', '2222', '2222', 0, 0, NULL);
 
 --
 -- Indexes for dumped tables
@@ -64,7 +68,7 @@ ALTER TABLE `gs_user_table`
 -- AUTO_INCREMENT for table `gs_user_table`
 --
 ALTER TABLE `gs_user_table`
-MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
